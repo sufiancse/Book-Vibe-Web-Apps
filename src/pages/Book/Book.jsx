@@ -13,7 +13,7 @@ const Book = ({ singleBook }) => {
     image,
     category,
     rating,
-  
+   totalPages,
     review,
     tags,
     
@@ -33,7 +33,7 @@ const Book = ({ singleBook }) => {
           </div>
           <h2 className="card-title">
             {bookName}
-            <div className="badge badge-secondary">{author}</div>
+            <div className="badge badge-secondary">{totalPages}</div>
           </h2>
           <p className="line-clamp-2">{review}</p>
           <div className="border-t border-dashed"></div>
