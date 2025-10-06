@@ -1,4 +1,3 @@
-import React, { use } from "react";
 import { FaStarHalf, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router";
 
@@ -6,18 +5,17 @@ const Book = ({ singleBook }) => {
   // const data = use(bookPromise)
   // console.log(data);
 
-//   console.log(singleBook);
+  //   console.log(singleBook);
   const {
     bookName,
-    author,
     image,
     category,
     rating,
-   totalPages,
+    totalPages,
     review,
     tags,
-    
-    bookId
+
+    bookId,
   } = singleBook;
   return (
     <Link to={`/bookDetails/${bookId}`}>
@@ -28,7 +26,9 @@ const Book = ({ singleBook }) => {
         <div className="card-body">
           <div className="flex justify-between">
             {tags.map((tag, i) => (
-              <button className="text-red-500" key={i}>{tag}</button>
+              <button className="text-red-500" key={i}>
+                {tag}
+              </button>
             ))}
           </div>
           <h2 className="card-title">
